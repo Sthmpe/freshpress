@@ -1,3 +1,4 @@
+/** 
 class ProductModel {
   final String id;
   final String name;
@@ -41,3 +42,4 @@ class ProductModel {
     };
   }
 }
+*/

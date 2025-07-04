@@ -1,3 +1,4 @@
+/**
 import 'package:minimart/common/models/cart_items.dart';
 
 class CartState {
@@ -17,3 +18,4 @@ class CartState {
 
   double get totalAmount => items.fold(0, (sum, item) => sum + (item.product.price * item.quantity));
 }
+*/

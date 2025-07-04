@@ -9,16 +9,16 @@ class FreshPressTexts {
   static const String layawayContinue = "Continue";
 
   // --- OnBoarding Texts
-  static const String onBoardingTitle1 = "Choose your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your doorstep";
+  static const String onBoardingTitle1 = "Explore and discover top rated near you";
+  static const String onBoardingTitle2 = "Pickup & delivery anytime you want it";
+  static const String onBoardingTitle3 = "Verified payment method";
 
   static const String onBoardingSubTitle1 =
-      "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
+      "We partner with trusted professionals for quality cleaning. The choice is yours";
   static const String onBoardingSubTitle2 =
-      "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
+      "Book pickups, track progress, and get clean clothes at your convenience";
   static const String onBoardingSubTitle3 =
-      "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery";
+      "We support multiple payment methods, including cards, wallets all for you";
 
   // --- Home
   static const String homeAppbarTitle = "Welcome! We love and celebrate you!";

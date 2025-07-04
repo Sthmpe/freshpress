@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freshpress/util/constants/colors.dart';
+import 'package:freshpress/util/constants/sizes.dart';
 
 class FreshPressAppBarTheme {
   FreshPressAppBarTheme._();

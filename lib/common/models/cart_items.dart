@@ -1,4 +1,5 @@
-import 'package:minimart/common/models/product_model.dart';
+/**
+import 'package:freshpress/common/models/product_model.dart';
 
 class CartItem {
   final ProductModel product;
@@ -13,3 +14,4 @@ class CartItem {
     );
   }
 }
+*/

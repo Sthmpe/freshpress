@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:freshpress/util/constants/colors.dart';
 
 class NavigationItem extends StatelessWidget {
-  final IconData icon;
+  final Widget icon;
   final String label;
   final int index;
   final int selectedIndex;
-  final int? badgeCount;
 
   const NavigationItem({
     super.key,
@@ -14,78 +13,57 @@ class NavigationItem extends StatelessWidget {
     required this.label,
     required this.index,
     required this.selectedIndex,
-    this.badgeCount,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 6.0, bottom: 32.0),
-      child: NavigationDestination(
-        icon: Stack(
+    return NavigationDestination(
+      icon: SizedBox(
+        height: 57,
+        width: 49,
+        child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 4.0,
-                horizontal: 16.0,
-              ),
-              height: 32,
-              width: MediaQuery.of(context).size.width / 4 - 24,
-              decoration: BoxDecoration(
-                color:
-                    selectedIndex == index
-                        ? FreshPressAppColors.primary
-                        : Colors.transparent,
-                borderRadius: BorderRadius.circular(16.0),
-              ),
-              child: Center(
-                child: Icon(
-                  icon,
-                  size: FreshPressSizes.iconMd,
-                  color:
-                      selectedIndex == index
-                          ? FreshPressAppColors.white
-                          : FreshPressAppColors.black,
+            Material(
+              borderRadius: BorderRadius.circular(25),
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: FreshPressAppColors.primary,
+                child: Container(
+                  padding: EdgeInsets.all(1),
+                  decoration: BoxDecoration(
+                    //shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(0)
+                  ),
+                  child: Center(
+                    child: icon,
+                  ),
                 ),
               ),
             ),
-
-            if (badgeCount != null && badgeCount! > 0)
-              Positioned(
-                right: 10.00,
-                top: 0.5,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8.52,
-                    vertical: 3.41,
-                  ),
-                  height: 24,
-                  width: 24,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF3C4856),
-                    borderRadius: BorderRadius.circular(68.17),
-                  ),
-                  child: Center(
-                    child: FittedBox(
-                      child: Text(
-                        '$badgeCount',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 10.22,
-                          fontWeight: FontWeight.w700,
-                          height: 17.04 / 10.22, // line-height ÷ font-size → 1.67
-                          letterSpacing: 0.0,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
+            SizedBox(height: 4),
+            SizedBox(
+              width: double.infinity,
+              child: Text(
+                label,
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.visible,
+                style: TextStyle(
+                  color:
+                      selectedIndex == index
+                          ? FreshPressAppColors.primary
+                          : FreshPressAppColors.icon,
+                  fontWeight:
+                      selectedIndex == index ? FontWeight.w600 : FontWeight.w400,
+                  fontSize: 14,
+                  height: 20 / 14, // line-height ÷ font-size → 1.33
+                  letterSpacing: -0.32,
                 ),
               ),
+            ),
           ],
         ),
-        label: label,
       ),
+      label: '',
     );
   }
 }

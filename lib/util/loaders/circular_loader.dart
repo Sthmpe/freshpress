@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:freshpress/util/constants/colors.dart';
+import 'package:freshpress/util/constants/sizes.dart';
 
 /// A circular loader widget with customizable foreground and background colors.
 class FreshPressCircularLoader extends StatelessWidget {

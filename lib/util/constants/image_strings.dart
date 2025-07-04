@@ -30,11 +30,11 @@ class FreshPressImages {
 
   // -- OnBoarding Texts
   static const String onBoardingImage1 =
-      "assets/images/on_boarding_images/sammy-line-searching.gif";
+      "assets/images/onboarding/iPhone 16 Plus - 2.png";
   static const String onBoardingImage2 =
-      "assets/images/on_boarding_images/sammy-line-shopping.gif";
+      "assets/images/onboarding/Frame 117.png";
   static const String onBoardingImage3 =
-      "assets/images/on_boarding_images/sammy-line-delivery.gif";
+      "assets/images/onboarding/iPhone 16 Plus - 2 (1).png";
 
   //Profile
   static const String user = "assets/images/content/user.png";

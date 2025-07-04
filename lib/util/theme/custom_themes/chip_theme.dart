@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:freshpress/util/constants/colors.dart';
 
 class FreshPressChipTheme {
   FreshPressChipTheme._();
@@ -7,7 +9,7 @@ class FreshPressChipTheme {
     disabledColor: Colors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: Colors.black),
     selectedColor: FreshPressAppColors.primary,
-    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+    padding: EdgeInsets.symmetric(horizontal: 12.0.w, vertical: 12.0.h),
     checkmarkColor: Colors.white,
   );
 
@@ -15,7 +17,7 @@ class FreshPressChipTheme {
     disabledColor: Colors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: Colors.white),
     selectedColor: FreshPressAppColors.primary,
-    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
+    padding: EdgeInsets.symmetric(horizontal: 12.0.w, vertical: 12.0.h),
     checkmarkColor: Colors.white,
   );
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:minimart/util/constants/colors.dart';
+import 'package:freshpress/util/constants/colors.dart';
 
-class MiniMartPrimaryHeaderContainer extends StatelessWidget {
-  const MiniMartPrimaryHeaderContainer({
+class FreshPressPrimaryHeaderContainer extends StatelessWidget {
+  const FreshPressPrimaryHeaderContainer({
     super.key,
     required this.child,
   });
@@ -12,7 +12,7 @@ class MiniMartPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: MiniMartAppColors.white,
+        color: FreshPressAppColors.white,
         padding: const EdgeInsets.all(0),
         child: child,
     );

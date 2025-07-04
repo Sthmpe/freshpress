@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:freshpress/util/constants/colors.dart';
+import 'package:freshpress/util/constants/sizes.dart';
 
 
 /// A widget for displaying an animated loading indicator with optional text and action button.
