@@ -9,6 +9,9 @@ import 'package:freshpress/util/validators/validation.dart';
 
 class CreateAccountBloc extends Bloc<CreateAccountEvent, CreateAccountState> {
   final PageController pageController = PageController();
+
+  final TextEditingController mobileController1 = TextEditingController();
+  final FocusNode mobileFocusNode1 = FocusNode();
   
   CreateAccountBloc() : super(CreateAccountState.initial()) {
 
@@ -47,5 +50,15 @@ class CreateAccountBloc extends Bloc<CreateAccountEvent, CreateAccountState> {
     on<CreateAccountPageChanged>((event, emit) {
       emit(state.copyWith(currentPage: event.pageIndex));
     });
+  }
+
+  // Override close to dispose controllers and focus nodes
+  @override
+  Future<void> close() {
+    pageController.dispose();
+
+    mobileController1.dispose();
+    mobileFocusNode1.dispose();
+    return super.close();
   }
 }

@@ -58,7 +58,8 @@ class FreshPressAppColors {
   static const Color darkerGrey = Color(0xFF4F4F4F);
   static const Color darkGrey = Color(0xFF939393);
   static const Color grey = Color(0xFF3F4247);
-  static const Color softGrey = Color(0xFFF4F4F4);
+  static const Color grey_1 = Color(0xFF4D5C5F);
+  static const Color softGrey = Color(0xFFD9D9D9);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
 
