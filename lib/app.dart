@@ -24,7 +24,7 @@ class App extends StatelessWidget {
             themeMode: ThemeMode.system,
             theme: FreshPressAppTheme.lightTheme,
             home: child,
-            debugShowCheckedModeBanner: false,
+            debugShowCheckedModeBanner: false,//08103694460
           );
         },
         child: OnBoardingScreen(),

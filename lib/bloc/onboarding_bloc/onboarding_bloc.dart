@@ -7,10 +7,12 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   final PageController pageController = PageController();
 
   OnboardingBloc() : super(OnboardingState(currentPage: 0)) {
+    
     on<OnboardingPageChanged>((event, emit) {
       emit(state.copyWith(currentPage: event.pageIndex));
     });
 
+    // Handle page changes
     on<OnboardingNextPage>((event, emit) {
       if (state.currentPage < 2) {
         pageController.nextPage(

@@ -22,13 +22,24 @@ class OnboardingText extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: TextStyle(
+              fontSize: 30.sp, // responsive font size
+              fontWeight: FontWeight.w600,
+              letterSpacing: -0.04,
+              height: 1.2, 
+            ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 16.h), // also made this responsive
+          SizedBox(height: 12.h), // also made this responsive
           Text(
             subTitle,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: TextStyle(
+              fontSize: 18.sp, // responsive font size
+              fontWeight: FontWeight.w400,
+              color: Color(0xFF4D5C5F), // using a grey color for better readability
+              height: 1.3, // line height for better spacing
+              letterSpacing: -0.04,
+            ),
             textAlign: TextAlign.center,
           ),
         ],

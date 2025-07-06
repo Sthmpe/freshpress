@@ -1,4 +1,7 @@
-class LayawayValidator {
+
+
+
+class FreshPressValidator {
   /// Empty Text Validation
   static String? validateEmptyText(String? fieldName, String? value) {
     if (value == null || value.isEmpty) {
@@ -28,22 +31,18 @@ class LayawayValidator {
     return null;
   }
 
-  static String? validateMobileNoOrEmail(String? value) {
+  static String? validateMobileNo(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Mobile number or email is required.';
+      return 'Mobile number is required.';
     }
 
     // Regular expression for mobile number validation
     final mobileRegExp = RegExp(r'^0[789][01]\d{8}$');
     final intMobileRegExp = RegExp(r'^(?:\+234|234)[789][01]\d{8}$');
 
-    // Regular expression for email validation
-    final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
-
     if (!mobileRegExp.hasMatch(value) && 
-        !intMobileRegExp.hasMatch(value) &&
-        !emailRegExp.hasMatch(value)) {
-      return 'Invalid mobile number or email address.';
+        !intMobileRegExp.hasMatch(value)) {
+      return 'Invalid mobile number';
     }
 
     return null;
