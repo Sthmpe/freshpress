@@ -22,4 +22,10 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
       }
     });
   }
+
+  @override
+  Future<void> close() {
+    pageController.dispose();
+    return super.close();
+  }
 }
